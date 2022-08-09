@@ -1,3 +1,5 @@
+import sys
+
 import numpy as np
 import tensorflow as tf
 
@@ -21,9 +23,8 @@ img_width = 224
 EPOCHS = 25
 buffer_size = 1024
 
-init_dir = "/home/solene.bechelli/ML/NDACES-summer/archive/"
-data_dir = init_dir + "train"
-data_dir_test = init_dir + "test"
+data_dir = sys.argv[1]
+data_dir_test = sys.argv[2]
 
 with tf.device('/GPU:7'):
 
