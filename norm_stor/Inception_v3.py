@@ -1,9 +1,3 @@
-'''Transfer learning workflow:
-1) define base model and load weights
-2) freeze all layers of base: trainable = False
-3) new model (on top of the base)
-4) training new model with new dataset'''
-
 #import matplotlib.pyplot as plt
 import sys
 import numpy as np
