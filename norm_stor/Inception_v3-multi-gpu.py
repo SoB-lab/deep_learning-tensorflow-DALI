@@ -1,3 +1,5 @@
+import sys
+
 import numpy as np
 import tensorflow as tf
 
@@ -20,9 +22,8 @@ img_width = 224
 
 EPOCHS = 25
 
-init_dir = "archive/"
-data_dir = init_dir + "train"
-data_dir_test = init_dir + "test"
+data_dir = sys.argv[1]
+data_dir_test = sys.argv[2]
 
 strategy = tf.distribute.MirroredStrategy()
 print('Number of devices: {}'.format(strategy.num_replicas_in_sync))
