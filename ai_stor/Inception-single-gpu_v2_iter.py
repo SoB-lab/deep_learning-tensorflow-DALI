@@ -1,3 +1,5 @@
+import sys
+
 from nvidia.dali.pipeline import Pipeline
 import nvidia.dali.ops as ops
 import nvidia.dali.types as types
@@ -8,8 +10,8 @@ from tensorflow import keras
 
 import time
 
-train_directory = '/ai/ndaces_solene/archive/train'
-valid_directory = '/ai/ndaces_solene/archive/test'
+train_directory = sys.argv[1]
+valid_directory = sys.argv[2]
 
 class Data_Pipeline(Pipeline):
     def __init__(self, batch_size, device, data_path, device_id=0, num_threads=4, seed=0):
