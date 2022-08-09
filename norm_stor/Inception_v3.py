@@ -5,6 +5,7 @@
 4) training new model with new dataset'''
 
 #import matplotlib.pyplot as plt
+import sys
 import numpy as np
 import tensorflow as tf
 
@@ -27,9 +28,8 @@ img_width = 224
 EPOCHS = 25
 buffer_size = 1024
 
-init_dir = "archive/"
-data_dir = init_dir + "train"
-data_dir_test = init_dir + "test"
+data_dir = sys.argv[1]
+data_dir_test = sys.argv[2]
 
 train_ds = tf.keras.preprocessing.image_dataset_from_directory(
     data_dir,
