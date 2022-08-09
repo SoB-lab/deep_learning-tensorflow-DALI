@@ -1,8 +1,4 @@
-'''Transfer learning workflow:
-1) define base model and load weights
-2) freeze all layers of base: trainable = False
-3) new model (on top of the base)
-4) training new model with new dataset'''
+import sys
 
 #import matplotlib.pyplot as plt
 import numpy as np
@@ -27,9 +23,8 @@ img_width = 224
 EPOCHS = 25
 buffer_size = 1024
 
-init_dir = "archive/"
-data_dir = init_dir + "train"
-data_dir_test = init_dir + "test"
+data_dir = sys.argv[1]
+data_dir_test = sys.argv[2]
 
 train_ds = tf.keras.preprocessing.image_dataset_from_directory(
     data_dir,
