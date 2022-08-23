@@ -6,4 +6,4 @@ This repository is a directory to use DALI API with tensorflow and pre-trained m
 - The norm_sotr folder contains all the programs required to train the three models on CPU. single GPU device and multi-GPU devices (8 devices).
 
 
-To run the programs: python <name_program.py> path_to_training path_to_testing
+To run the programs: python <python.py> path_to_training path_to_testing
